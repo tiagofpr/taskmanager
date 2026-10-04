@@ -1,11 +1,13 @@
 package org.tiagoribeiro.taskmanager.infrastructure.repository;
 
+import org.springframework.stereotype.Repository;
 import org.tiagoribeiro.taskmanager.domain.Task;
 import org.tiagoribeiro.taskmanager.domain.TaskId;
 import org.tiagoribeiro.taskmanager.domain.TaskRepository;
 
 import java.util.*;
 
+@Repository
 public class InMemoryTaskRepository implements TaskRepository {
 
     private final Map<TaskId, Task> storage = new HashMap<>();
